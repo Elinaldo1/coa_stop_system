@@ -1,0 +1,10 @@
+.env
+
+# Ignore a pasta de ambiente virtual (venv)
+.venv/
+
+# Ignore a pasta de byte-compiled files do Python
+__pycache__/
+
+
+pyvenv.cfg

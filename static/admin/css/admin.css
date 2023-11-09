@@ -1,0 +1,11 @@
+/* Personalize a cor de fundo do cabeçalho do admin */
+.header {
+    background-color: red;
+}
+
+/* Personalize a cor do texto dos links no menu de navegação */
+#header a {
+    color: orange;
+}
+
+/* Adicione outras personalizações de CSS conforme necessário */

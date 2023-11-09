@@ -18,10 +18,19 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework import routers
+from stopSystem.api import viewsets as vst
+
+
+route = routers.DefaultRouter()
+route.register(r"fleets", vst.StopViewSet, basename="Fleets")
+
 
 urlpatterns = [
-    path("", include("stopSystem.urls")),
-    path('admin/', admin.site.urls),
+    path("api-stop-system/", include(route.urls)),
+    path("stop/", include("stopSystem.urls")),
+    # path('api-auth/', include('rest_framework.urls')),
+    path("", admin.site.urls),
 ]
 
 

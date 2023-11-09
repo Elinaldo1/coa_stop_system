@@ -1,0 +1,29 @@
+{% extends "admin/base.html" %}
+
+{% block content %}
+<div id="content-main">
+    <form method="post" action="">
+        {% csrf_token %}
+        <h2>Criar Registros de LogAgricola para os seguintes itens selecionados:</h2>
+        {% for fleet in fleets %}
+            {{ fleet.fleetId }}
+        {% endfor %}
+        <div class="form-row">
+            {{ form.status }}
+        </div>
+        <div class="form-row">
+            {{ form.description }}
+        </div>
+        <div class="form-row">
+            {{ form.stopReason }}
+        </div>
+        <div class="form-row">
+            {{ form.operationFront }}
+        </div>
+        <div class="form-row">
+            {{ form.fleet }}
+        </div>
+        <button type="submit" name="apply" class="default">Criar Registros de LogAgricola</button>
+    </form>
+</div>
+{% endblock %}
